@@ -279,7 +279,7 @@ body {
   padding: 13.5px 56px;
 }
 .link-btn a:after {
-  content: url("/assets/images/svg/VectorArrow.svg");
+  content: url("/momspace_v/assets/images/svg/VectorArrow.svg");
   margin-left: 8px;
 }
 
@@ -303,13 +303,13 @@ body {
   margin-left: 5px;
 }
 .social__likes:after {
-  content: url("/assets/images/svg/hearth.svg");
+  content: url("/momspace_v/assets/images/svg/hearth.svg");
 }
 .social__comments:after {
-  content: url("/assets/images/svg/comments.svg");
+  content: url("/momspace_v/assets/images/svg/comments.svg");
 }
 .social__views:after {
-  content: url("/assets/images/svg/views.svg");
+  content: url("/momspace_v/assets/images/svg/views.svg");
 }
 
 .articles-box.type-1 {
@@ -412,7 +412,7 @@ header .middle .navbar-nav .nav-link {
 header .middle .navbar-nav .dropdown-toggle::after {
   position: relative;
   margin-left: 18px;
-  content: url("/assets/images/svg/Rectangle40544.svg");
+  content: url("/momspace_v/assets/images/svg/Rectangle40544.svg");
   border: 0;
   left: -7px;
   bottom: -3px;
@@ -442,7 +442,7 @@ header .bottom .navbar-nav .nav-link {
   color: var(--theme-black);
 }
 header .bottom .navbar-nav .nav-link:after {
-  content: url("/assets/images/svg/Vector.svg");
+  content: url("/momspace_v/assets/images/svg/Vector.svg");
   position: relative;
   top: -2px;
   margin-left: 4px;
