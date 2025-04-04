@@ -6,21 +6,25 @@
     <title>Базовая верстка</title>
     <!-- Подключаем стили Bootstrap -->
     <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- стили -->
     <link href="assets/css/style.css" rel="stylesheet">
-    <!-- Подключаем стили для выпадающего меню -->
+    <!-- Подключаем шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Signika+Negative:wght@300..700&display=swap"
           rel="stylesheet">
+
+
 </head>
 
 <body>
-<div class="container box content-wrapper">
+<div class="content-wrapper">
     <header>
         <div>
-            <div class="row align-items-center up">
-                <div class="col-md-2 logo-box">
+            <div class="align-items-center up">
+                <div class="logo-box">
                     <a href="#" class="logo">
                         <svg width="210" height="60" viewBox="0 0 210 60" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +89,7 @@
                         </svg>
                     </a>
                 </div>
-                <div class="col-md-8">
+                <div>
                     <label class="box search-box">
                         <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21.127 21.375L19.252 19.5M11.2832 20.4375C12.4528 20.4375 13.6109 20.2071 14.6915 19.7596C15.772 19.312 16.7539 18.6559 17.5809 17.8289C18.4079 17.0019 19.0639 16.0201 19.5115 14.9395C19.9591 13.859 20.1895 12.7008 20.1895 11.5312C20.1895 10.3617 19.9591 9.20353 19.5115 8.12298C19.0639 7.04242 18.4079 6.0606 17.5809 5.23358C16.7539 4.40656 15.772 3.75053 14.6915 3.30295C13.6109 2.85537 12.4528 2.625 11.2832 2.625C8.92112 2.625 6.65578 3.56333 4.98553 5.23358C3.31529 6.90383 2.37695 9.16917 2.37695 11.5312C2.37695 13.8933 3.31529 16.1587 4.98553 17.8289C6.65578 19.4992 8.92112 20.4375 11.2832 20.4375Z"
@@ -94,7 +98,7 @@
                         <input type="text" placeholder="Календарь береме...">
                     </label>
                 </div>
-                <div class="col-md-2 d-flex justify-content-end socials">
+                <div class="d-flex justify-content-end socials">
                     <a href="#">
                         <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="30.2379" cy="30.014" r="29.986" fill="#FF56AD"/>
@@ -251,50 +255,51 @@
     <main>
         <div>
             <div class="row simple-box">
-                <h1><span class="title">Mom space </span>
-                    <span class="desc"> — Быть мамой быть собой</span></h1>
-                <div class="simple-box__flex-list">
-                    <div class="illustration-box">
-                        <a href="#">
-                            <div>
-                                <img src="assets/images/baby_on_hands.png" alt="Все о родах">
-                            </div>
-                            <span>Все о родах</span>
-                        </a>
-                    </div>
-                    <div class="illustration-box">
-                        <a href="#">
-                            <div>
-                                <img src="assets/images/mom.png" alt="Беременность">
-                            </div>
-                            <span>Беременность</span>
-                        </a>
-                    </div>
-                    <div class="illustration-box">
-                        <a href="#">
-                            <div>
-                                <img src="assets/images/washing.png" alt="Развитие">
-                            </div>
-                            <span>Развитие</span>
-                        </a>
-                    </div>
-                    <div class="illustration-box">
-                        <a href="#">
-                            <div>
-                                <img src="assets/images/daughter.png" alt="Досуг">
-                            </div>
-                            <span>Досуг</span>
-                        </a>
-                    </div>
-                    <div class="illustration-box">
-                        <a href="#">
-                            <div>
-                                <img src="assets/images/family.png" alt="Семья">
-                            </div>
-                            <span>Семья</span>
-                        </a>
+                <div class="swiper">
+                    <div class="swiper-wrapper simple-box__flex-list padding-top-0 gap-0">
+                        <div class="illustration-box swiper-slide">
+                            <a href="#">
+                                <div>
+                                    <img src="assets/images/baby_on_hands.png" alt="Все о родах">
+                                </div>
+                                <span>Все о родах</span>
+                            </a>
+                        </div>
+                        <div class="illustration-box swiper-slide">
+                            <a href="#">
+                                <div>
+                                    <img src="assets/images/mom.png" alt="Беременность">
+                                </div>
+                                <span>Беременность</span>
+                            </a>
+                        </div>
+                        <div class="illustration-box swiper-slide">
+                            <a href="#">
+                                <div>
+                                    <img src="assets/images/washing.png" alt="Развитие">
+                                </div>
+                                <span>Развитие</span>
+                            </a>
+                        </div>
+                        <div class="illustration-box swiper-slide">
+                            <a href="#">
+                                <div>
+                                    <img src="assets/images/daughter.png" alt="Досуг">
+                                </div>
+                                <span>Досуг</span>
+                            </a>
+                        </div>
+                        <div class="illustration-box swiper-slide">
+                            <a href="#">
+                                <div>
+                                    <img src="assets/images/family.png" alt="Семья">
+                                </div>
+                                <span>Семья</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
+                <div class="swiper-scrollbar"></div>
             </div>
             <div class="row simple-box back-lblue">
                 <div class="simple-box__section">
@@ -409,11 +414,11 @@
                     <h2>Беременность</h2>
                     <div class="link-btn simple-box__link-btn">
                         <a class="pink-arrow" href="#">
-                            статьи и сервисы этого раздела
+                            Статьи и сервисы этого раздела
                         </a>
                     </div>
                     <h3>Календарь беременности</h3>
-                    <div class="simple-box__flex-list">
+                    <div class="simple-box__flex-list vertical-768">
                         <div class="radius-20 back-lpink trimestr">
                             <h5>Первый триместр</h5>
                             <div class="grid-5">
@@ -483,7 +488,7 @@
                         <div class="box number">07</div>
                         <div class="box number">08</div>
                         <div class="box number">09</div>
-                        <div class="link-btn">
+                        <div class="link-btn a-width-100-1400">
                             <a class="pink-arrow" href="#">
                                 Полезные материалы о планировнаии беременности
                             </a>
@@ -608,64 +613,23 @@
                 </div>
             </div>
             <div class="row simple-box extra-padding">
-                <div>
-                    <h2 class="padding-bottom-69">Рекомендуемые статьи от Mom space</h2>
-                    <div class="articles-box type-1">
-                        <div class="box radius-30 articles-colmn">
-                            <h3 class="green-heart">Новые статьи</h3>
-                            <div class="box radius-20 article-card small">
-                                <div class="article-card__date">
-                                    25 марта 2025
-                                </div>
-                                <div class="social">
-                                    <span class="social__likes">42</span>
-                                    <span class="social__comments">11</span>
-                                    <span class="social__views">256</span>
-                                </div>
-                                <div class="article-card__img">
-                                    <img src="assets/images/article.jpg" alt="Пост 1">
-                                    <div class="article-card__img__filter"></div>
-                                    <span>#Развитие</span>
-                                </div>
-                                <span class="article-card__title">Идеи для гендер пати: как удивить гостей и что дарят на гендер-пати Идеи для гендер пати: как удивить гостей и что дарят на гендер-пати</span>
-                                <a href="#" class="pink-arrow article-card__link">Читать далее</a>
-                            </div>
-                            <div class="box radius-20 article-card small">
-                                <div class="article-card__date">
-                                    25 марта 2025
-                                </div>
-                                <div class="social">
-                                    <span class="social__likes">42</span>
-                                    <span class="social__comments">11</span>
-                                    <span class="social__views">256</span>
-                                </div>
-                                <div class="article-card__img">
-                                    <img src="assets/images/article.jpg" alt="Пост 1">
-                                    <div class="article-card__img__filter"></div>
-                                    <span>#Беременность</span>
-                                </div>
-                                <span class="article-card__title">Идеи для гендер пати: как удивить гостей и что дарят на гендер-пати Идеи для гендер пати: как удивить гостей и что дарят на гендер-пати</span>
-                                <a href="#" class="pink-arrow article-card__link">Читать далее</a>
-                            </div>
-                            <div class="box radius-20 article-card small">
-                                <div class="article-card__date">
-                                    25 марта 2025
-                                </div>
-                                <div class="social">
-                                    <span class="social__likes">42</span>
-                                    <span class="social__comments">11</span>
-                                    <span class="social__views">256</span>
-                                </div>
-                                <div class="article-card__img">
-                                    <img src="assets/images/article.jpg" alt="Пост 1">
-                                    <div class="article-card__img__filter"></div>
-                                    <span>#Досуг</span>
-                                </div>
-                                <span class="article-card__title">Идеи для гендер пати: как удивить гостей и что дарят на гендер-пати Идеи для гендер пати: как удивить гостей и что дарят на гендер-пати</span>
-                                <a href="#" class="pink-arrow article-card__link">Читать далее</a>
-                            </div>
-                        </div>
-                        <div class="box radius-30 article-card green">
+                <h2 class="padding-bottom-69">Рекомендуемые статьи от Mom space</h2>
+                <div class="articles-box type-1">
+                    <div class="articles-box__search">
+                        <button class="btn radius-76">Больше статей для тебя</button>
+                        <label class="box search-box">
+                            <svg width="23" height="24" viewBox="0 0 23 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.127 21.375L19.252 19.5M11.2832 20.4375C12.4528 20.4375 13.6109 20.2071 14.6915 19.7596C15.772 19.312 16.7539 18.6559 17.5809 17.8289C18.4079 17.0019 19.0639 16.0201 19.5115 14.9395C19.9591 13.859 20.1895 12.7008 20.1895 11.5312C20.1895 10.3617 19.9591 9.20353 19.5115 8.12298C19.0639 7.04242 18.4079 6.0606 17.5809 5.23358C16.7539 4.40656 15.772 3.75053 14.6915 3.30295C13.6109 2.85537 12.4528 2.625 11.2832 2.625C8.92112 2.625 6.65578 3.56333 4.98553 5.23358C3.31529 6.90383 2.37695 9.16917 2.37695 11.5312C2.37695 13.8933 3.31529 16.1587 4.98553 17.8289C6.65578 19.4992 8.92112 20.4375 11.2832 20.4375Z"
+                                      stroke="#FF56AD" stroke-width="1.5" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg>
+                            <input type="text" placeholder="Календарь береме...">
+                        </label>
+                    </div>
+                    <div class="box radius-30 articles-colmn">
+                        <h3 class="green-heart">Новые статьи</h3>
+                        <div class="box radius-20 article-card small">
                             <div class="article-card__date">
                                 25 марта 2025
                             </div>
@@ -679,27 +643,10 @@
                                 <div class="article-card__img__filter"></div>
                                 <span>#Развитие</span>
                             </div>
-                            <span class="article-card__title">Идеи для гендер пати: </span>
-                            <a href="#" class="pink-arrow article-card__link">Читать далее</a>
-                        </div>
-                        <div class="box radius-30 article-card black">
-                            <div class="article-card__date">
-                                25 марта 2025
-                            </div>
-                            <div class="social">
-                                <span class="social__likes">42</span>
-                                <span class="social__comments">11</span>
-                                <span class="social__views">256</span>
-                            </div>
-                            <div class="article-card__img">
-                                <img src="assets/images/article.jpg" alt="Пост 1">
-                                <div class="article-card__img__filter"></div>
-                                <span>#Здоровье</span>
-                            </div>
                             <span class="article-card__title">Идеи для гендер пати: как удивить гостей и что дарят на гендер-пати Идеи для гендер пати: как удивить гостей и что дарят на гендер-пати</span>
                             <a href="#" class="pink-arrow article-card__link">Читать далее</a>
                         </div>
-                        <div class="box radius-30 article-card pink">
+                        <div class="box radius-20 article-card small">
                             <div class="article-card__date">
                                 25 марта 2025
                             </div>
@@ -713,10 +660,10 @@
                                 <div class="article-card__img__filter"></div>
                                 <span>#Беременность</span>
                             </div>
-                            <span class="article-card__title">Идеи для гендер пати: как удивить гостей.</span>
+                            <span class="article-card__title">Идеи для гендер пати: как удивить гостей и что дарят на гендер-пати Идеи для гендер пати: как удивить гостей и что дарят на гендер-пати</span>
                             <a href="#" class="pink-arrow article-card__link">Читать далее</a>
                         </div>
-                        <div class="box radius-30 article-card lime">
+                        <div class="box radius-20 article-card small">
                             <div class="article-card__date">
                                 25 марта 2025
                             </div>
@@ -730,22 +677,79 @@
                                 <div class="article-card__img__filter"></div>
                                 <span>#Досуг</span>
                             </div>
-                            <span class="article-card__title">Идеи для гендер пати: как удивить гостей.</span>
+                            <span class="article-card__title">Идеи для гендер пати: как удивить гостей и что дарят на гендер-пати Идеи для гендер пати: как удивить гостей и что дарят на гендер-пати</span>
                             <a href="#" class="pink-arrow article-card__link">Читать далее</a>
                         </div>
-                        <div class="articles-box__search">
-                            <button class="btn radius-76">Больше статей для тебя</button>
-                            <label class="box search-box">
-                                <svg width="23" height="24" viewBox="0 0 23 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21.127 21.375L19.252 19.5M11.2832 20.4375C12.4528 20.4375 13.6109 20.2071 14.6915 19.7596C15.772 19.312 16.7539 18.6559 17.5809 17.8289C18.4079 17.0019 19.0639 16.0201 19.5115 14.9395C19.9591 13.859 20.1895 12.7008 20.1895 11.5312C20.1895 10.3617 19.9591 9.20353 19.5115 8.12298C19.0639 7.04242 18.4079 6.0606 17.5809 5.23358C16.7539 4.40656 15.772 3.75053 14.6915 3.30295C13.6109 2.85537 12.4528 2.625 11.2832 2.625C8.92112 2.625 6.65578 3.56333 4.98553 5.23358C3.31529 6.90383 2.37695 9.16917 2.37695 11.5312C2.37695 13.8933 3.31529 16.1587 4.98553 17.8289C6.65578 19.4992 8.92112 20.4375 11.2832 20.4375Z"
-                                          stroke="#FF56AD" stroke-width="1.5" stroke-linecap="round"
-                                          stroke-linejoin="round"/>
-                                </svg>
-                                <input type="text" placeholder="Календарь береме...">
-                            </label>
-                        </div>
                     </div>
+                    <div class="box radius-30 article-card green">
+                        <div class="article-card__date">
+                            25 марта 2025
+                        </div>
+                        <div class="social">
+                            <span class="social__likes">42</span>
+                            <span class="social__comments">11</span>
+                            <span class="social__views">256</span>
+                        </div>
+                        <div class="article-card__img">
+                            <img src="assets/images/article.jpg" alt="Пост 1">
+                            <div class="article-card__img__filter"></div>
+                            <span>#Развитие</span>
+                        </div>
+                        <span class="article-card__title">Идеи для гендер пати: </span>
+                        <a href="#" class="pink-arrow article-card__link">Читать далее</a>
+                    </div>
+                    <div class="box radius-30 article-card black">
+                        <div class="article-card__date">
+                            25 марта 2025
+                        </div>
+                        <div class="social">
+                            <span class="social__likes">42</span>
+                            <span class="social__comments">11</span>
+                            <span class="social__views">256</span>
+                        </div>
+                        <div class="article-card__img">
+                            <img src="assets/images/article.jpg" alt="Пост 1">
+                            <div class="article-card__img__filter"></div>
+                            <span>#Здоровье</span>
+                        </div>
+                        <span class="article-card__title">Идеи для гендер пати: как удивить гостей и что дарят на гендер-пати Идеи для гендер пати: как удивить гостей и что дарят на гендер-пати</span>
+                        <a href="#" class="pink-arrow article-card__link">Читать далее</a>
+                    </div>
+                    <div class="box radius-30 article-card pink">
+                        <div class="article-card__date">
+                            25 марта 2025
+                        </div>
+                        <div class="social">
+                            <span class="social__likes">42</span>
+                            <span class="social__comments">11</span>
+                            <span class="social__views">256</span>
+                        </div>
+                        <div class="article-card__img">
+                            <img src="assets/images/article.jpg" alt="Пост 1">
+                            <div class="article-card__img__filter"></div>
+                            <span>#Беременность</span>
+                        </div>
+                        <span class="article-card__title">Идеи для гендер пати: как удивить гостей.</span>
+                        <a href="#" class="pink-arrow article-card__link">Читать далее</a>
+                    </div>
+                    <div class="box radius-30 article-card lime">
+                        <div class="article-card__date">
+                            25 марта 2025
+                        </div>
+                        <div class="social">
+                            <span class="social__likes">42</span>
+                            <span class="social__comments">11</span>
+                            <span class="social__views">256</span>
+                        </div>
+                        <div class="article-card__img">
+                            <img src="assets/images/article.jpg" alt="Пост 1">
+                            <div class="article-card__img__filter"></div>
+                            <span>#Досуг</span>
+                        </div>
+                        <span class="article-card__title">Идеи для гендер пати: как удивить гостей.</span>
+                        <a href="#" class="pink-arrow article-card__link">Читать далее</a>
+                    </div>
+
                 </div>
             </div>
             <div class="row simple-box back-lgreen">
@@ -922,7 +926,40 @@
     </footer>
     <!-- <img class="test" src="/assets/images/ads.jpg"> -->
 </div>
-<!-- Подключаем скрипты Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        slidesPerView: 5,
+        speed: 600, // Скорость переключения слайдов в миллисекундах
+        breakpoints: {
+            0: {
+                slidesPerView: 2,
+            },
+            576: {
+                slidesPerView: 3,
+            },
+            992: {
+                slidesPerView: 4,
+            },
+            1400: {
+                slidesPerView: 5,
+            },
+        },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: false,
+        },
+        autoplay: {
+            delay: 2500, // Время задержки между слайдами в миллисекундах
+            disableOnInteraction: false, // Не отключать автопрокрутку после взаимодействия
+        },
+        spaceBetween: 10,
+    });
+</script>
 </body>
 </html>
