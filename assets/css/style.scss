@@ -157,6 +157,18 @@ body {
   background-color: var(--theme-lblue);
 }
 
+.back-llgray {
+  background-color: var(--theme-llgray);
+}
+
+.back-lpurple {
+  background-color: var(--theme-lpurple);
+}
+
+.back-llime {
+  background-color: var(--theme-llime);
+}
+
 // базовые бордер
 .border-lgray {
   border-color: var(--theme-lgray) !important;
@@ -449,6 +461,9 @@ input:focus, textarea:focus, select:focus {
 
   &.extra-padding {
     padding-top: 65px;
+    & > h2 {
+      padding-bottom: 69px;
+    }
   }
 
   h1, h2, h3, h4 {
@@ -527,8 +542,8 @@ input:focus, textarea:focus, select:focus {
       display: grid;
       grid-template-columns: auto 596px;
       grid-template-rows: min-content max-content;
-      gap: 0 51px;
-      padding-top: 45px;
+      gap: 0 2.5rem;
+      padding-top: 2.5rem;
       & .img-box {
         grid-row: 1/-1;
         grid-column: 2;
@@ -539,7 +554,7 @@ input:focus, textarea:focus, select:focus {
         }
       }
       & .text-box {
-        padding-top: 51px;
+        padding-top: 2.5rem;
       }
       p {
         font-size: 1.5rem;
@@ -618,6 +633,9 @@ input:focus, textarea:focus, select:focus {
         padding-left: 21px;
         padding-right: 25px;
       }
+      &.small-padding {
+        padding-top: 1.5rem;
+      }
     }
     &__section {
       padding: 1.5rem 2rem 3rem 2rem;
@@ -625,13 +643,20 @@ input:focus, textarea:focus, select:focus {
       & > h3,
       & > h4,
       & > h5{
-        padding-top: 3rem;
+        padding-top: 2rem;
         max-width: 100%;
       }
     }
 
     &__link-btn {
       position: static;
+    }
+
+    &.extra-padding {
+      padding-top: 2rem;
+      & > h2 {
+        padding-bottom: 2rem;
+      }
     }
   }
 }
@@ -703,23 +728,23 @@ a.pink-arrow {
     display: block;
     content: '';
     position: absolute;
-    width: 120px;
-    height: 120px;
+    width: 9rem;
+    height: 9rem;
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 1;
   }
   &:after {
     background-image: url("/../../momspace_v/assets/images/img-heart-1.png");
-    left: -50px;
-    top: 30px;
+    left: -3rem;
+    top: 2rem;
     animation: pulse 4s infinite;
   }
   &:before {
     z-index: 2;
     background-image: url("/../../momspace_v/assets/images/img-heart-2.png");
-    bottom: -50px;
-    right: 30px;
+    bottom: -3rem;
+    right: 2rem;
     animation: pulse 5s infinite;
   }
 }
@@ -935,6 +960,8 @@ a.pink-arrow {
   "title title"
   "link link";
 
+  border-radius: 30px;
+
   gap: 22px;
   .social {
     justify-self: end;
@@ -999,6 +1026,8 @@ a.pink-arrow {
             "title title"
             "date link";
 
+    border-radius: 20px;
+
     border: none;
     font-size: 1rem;
     padding: 18px 20px;
@@ -1039,6 +1068,7 @@ a.pink-arrow {
 @media (max-width: 768px) {
   .article-card {
     padding: 14px;
+    border-radius: 2rem;
     &__img {
       width: 314px;
       height: 187px;
@@ -1050,8 +1080,8 @@ a.pink-arrow {
   .article-card {
     padding: 14px;
     &__img {
-      width: 266px;
-      height: 158px;
+      width: 100%;
+      height: 100%;
     }
   }
 }
@@ -1286,6 +1316,13 @@ input {
       }
     }
   }
+  &:not(:checked) {
+    & + div {
+      .extra-menu {
+        display: none;
+      }
+    }
+  }
 }
 
 header {
@@ -1326,6 +1363,10 @@ header {
     background-color: var(--theme-green);
     padding: 0 51px;
 
+    .close-cross {
+      display: none;
+    }
+
     .navbar-nav {
       width: 100%;
       justify-content: space-between;
@@ -1356,14 +1397,31 @@ header {
         height: 100%;
         a {
           padding: 8px 0 15px 0;
+          transition: 0.2s;
         }
         &:hover > ul.dropdown-menu {
           display: block !important;
+        }
+        ul.dropdown-menu {
           left: -32px;
           border: none;
           border-radius: 0 0 20px 20px;
           box-shadow: 0 12px 16px #0003;
           padding: 10px 33px;
+        }
+        a:hover {
+          text-decoration: none;
+          background-color: #0000;
+          border-radius: 1rem;
+          color: var(--theme-black);
+          text-shadow: 0 0 5px var(--theme-lpink);
+          transform: scale(1.04);
+        }
+        a:active {
+          text-decoration: none;
+          background-color: #0000;
+          border-radius: 1rem;
+          color: var(--theme-lpink);
         }
       }
 
@@ -1384,6 +1442,59 @@ header {
         border: 0;
         left: -7px;
         bottom: -3px;
+      }
+    }
+
+    .extra-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--theme-white);
+      z-index: 100;
+      padding: 30px 50px;
+      box-shadow: 0 12px 16px #0003;
+      & > ul {
+        flex-direction: column;
+        -webkit-box-orient: vertical;
+        text-align: center;
+        gap: 15px;
+        & > li.extra-menu__title {
+          & > a {
+            display: grid;
+            padding: 10px 120px;
+            width: 100%;
+            border-radius: 20px;
+            color: var(--theme-black);
+          }
+          ul {
+            flex-direction: column;
+            -webkit-box-orient: vertical;
+            text-align: start;
+          }
+          li.dropdown {
+            width: 100%;
+            & > a {
+              display: grid;
+              grid-template-columns: 3fr 1fr;
+              align-items: center;
+              &:after {
+                display: block;
+                justify-self: end;
+                left: -16px;
+                bottom: 19px;
+              }
+            }
+            &:hover > ul.dropdown-menu {
+              position: relative;
+              box-shadow: none;
+              right: 0;
+              width: 100%;
+              left: 0;
+            }
+          }
+        }
+
+
       }
     }
   }
@@ -1457,6 +1568,9 @@ header {
     padding-top: 83px;
   }
   header {
+    .extra-menu {
+      display: none;
+    }
     overflow: visible;
     position: fixed;
     top: 0;
@@ -1505,6 +1619,13 @@ header {
       overflow-y: auto;
       max-height: 80vh;
       padding: 0 21px;
+      padding-top: 8px;
+      .dropdown-toggle::after {
+        margin-left: 12px;
+        border: 0;
+        left: -7px;
+        bottom: -3px;
+      }
       .sandwich {
         display: none;
       }
@@ -1518,6 +1639,16 @@ header {
             padding: 6px 0 12px 0;
           }
         }
+        ul.dropdown-menu {
+          left: 0;
+          box-shadow: 0 0 0 #000 !important;
+          padding: 5px 33px;
+        }
+      }
+
+      .close-cross {
+        display: block;
+        margin-top: .5rem;
       }
     };
 
@@ -1722,6 +1853,9 @@ header {
 @media (max-width: 768px) {
   .trimestr {
     padding: 2rem;
+    h5 {
+      padding-bottom: 2rem;
+    }
   }
 }
 
