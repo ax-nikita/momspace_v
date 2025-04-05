@@ -22,8 +22,17 @@
 <body>
 <div class="content-wrapper">
     <header>
+        <input type="checkbox" id="open-nav-menu">
         <div>
-            <div class="align-items-center up">
+            <div class="up">
+                <label for="open-nav-menu" class="sandwich">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="27" viewBox="0 0 38 27"
+                         fill="none">
+                        <path d="M2 1.5H23.1846" stroke="#231F20" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M2 13.5H36.4756" stroke="#231F20" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M2 25.5H26.5186" stroke="#231F20" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </label>
                 <div class="logo-box">
                     <a href="#" class="logo">
                         <svg width="210" height="60" viewBox="0 0 210 60" fill="none"
@@ -141,13 +150,9 @@
                 </div>
             </div>
             <nav class="navbar navbar-expand-lg navbar-light middle">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li><label class="sandwich">
+                        <li><label class="sandwich" for="open-nav-menu">
                             <svg xmlns="http://www.w3.org/2000/svg" width="38" height="27" viewBox="0 0 38 27"
                                  fill="none">
                                 <path d="M2 1.5H23.1846" stroke="#231F20" stroke-width="3" stroke-linecap="round"/>
@@ -304,11 +309,6 @@
             <div class="row simple-box back-lblue">
                 <div class="simple-box__section">
                     <h2>Планирование беременности</h2>
-                    <div class="link-btn simple-box__link-btn">
-                        <a class="pink-arrow" href="#">
-                            Статьи и сервисы этого раздела
-                        </a>
-                    </div>
                     <div class="simple-box__flex-list short">
                         <div class="illustration-box-circle pink">
                             <a href="#">
@@ -407,16 +407,16 @@
                         </div>
 
                     </div>
-                </div>
-            </div>
-            <div class="row simple-box back-lgreen">
-                <div class="simple-box__section">
-                    <h2>Беременность</h2>
                     <div class="link-btn simple-box__link-btn">
                         <a class="pink-arrow" href="#">
                             Статьи и сервисы этого раздела
                         </a>
                     </div>
+                </div>
+            </div>
+            <div class="row simple-box back-lgreen">
+                <div class="simple-box__section">
+                    <h2>Беременность</h2>
                     <h3>Календарь беременности</h3>
                     <div class="simple-box__flex-list vertical-768">
                         <div class="radius-20 back-lpink trimestr">
@@ -478,7 +478,7 @@
                         </div>
                     </div>
                     <h4>По месяцам</h4>
-                    <div class="simple-box__flex-list small-padding gap-5">
+                    <div class="simple-box__flex-list small-padding gap-5 by-month">
                         <div class="box number">01</div>
                         <div class="box number">02</div>
                         <div class="box number">03</div>
@@ -609,6 +609,11 @@
                                 <span>Подбор имени малышу</span>
                             </a>
                         </div>
+                    </div>
+                    <div class="link-btn simple-box__link-btn">
+                        <a class="pink-arrow" href="#">
+                            Статьи и сервисы этого раздела
+                        </a>
                     </div>
                 </div>
             </div>
