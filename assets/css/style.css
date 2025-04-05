@@ -344,12 +344,13 @@ body::-webkit-scrollbar-thumb, body::-webkit-scrollbar-track {
   .illustration-box-circle a {
     gap: 20px;
     grid-template-areas: "img a arrow";
+    grid-template-columns: min-content auto min-content;
   }
   .illustration-box-circle a > div {
     height: 128px;
     grid-area: img;
   }
-  .illustration-box-circle a span, .illustration-box-circle a > div {
+  .illustration-box-circle a > div {
     font-size: 2rem;
     width: 128px;
   }
@@ -366,17 +367,20 @@ body::-webkit-scrollbar-thumb, body::-webkit-scrollbar-track {
   }
 }
 @media (max-width: 576px) {
-  .illustration-box-circle {
-    width: 100%;
-  }
   .illustration-box-circle a {
-    gap: 20px;
+    gap: 10px;
   }
   .illustration-box-circle a > div {
-    height: 128px;
+    height: 78px;
+    grid-area: img;
   }
-  .illustration-box-circle a span, .illustration-box-circle a > div {
-    width: 128px;
+  .illustration-box-circle a > div {
+    font-size: 2rem;
+    width: 78px;
+  }
+  .illustration-box-circle a:after {
+    height: 80px;
+    width: 50px;
   }
 }
 input:focus, textarea:focus, select:focus {
@@ -556,6 +560,10 @@ input:focus, textarea:focus, select:focus {
   .simple-box .by-month {
     gap: 8px;
   }
+  .simple-box__flex-list.short {
+    padding-left: 11px;
+    padding-right: 15px;
+  }
 }
 @media (max-width: 576px) {
   .simple-box {
@@ -566,6 +574,10 @@ input:focus, textarea:focus, select:focus {
   }
   .simple-box .by-month {
     gap: 6px;
+  }
+  .simple-box__flex-list.short {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 .link-btn a {
@@ -1305,6 +1317,8 @@ header .bottom .navbar-nav .nav-link {
     padding: 15px 20px;
     height: 45px;
     margin-left: 2%;
+    width: 100%;
+    margin-right: 6px;
   }
   header .up .sandwich {
     margin-right: 15px;
@@ -1328,25 +1342,26 @@ header .bottom .navbar-nav .nav-link {
   header .up {
     padding: 14px 20px 12px 20px;
     grid-template-columns: min-content 40px auto max-content;
+    gap: 5px;
   }
   header .up .sandwich {
     margin-right: 10px;
-    padding: 7px 4px;
+    padding: 2px 4px;
   }
   header .up .sandwich svg {
-    width: 30px;
+    width: 20px;
     height: 25px;
   }
   header .up .search-box {
-    padding: 14px 17px;
-    height: 40px;
+    padding: 9px 10px;
+    height: 30px;
     margin-left: 0;
   }
   header .up .logo [fill="#231F20"] {
     display: none;
   }
   header .up .logo svg {
-    height: 40px;
+    height: 30px;
     width: 100px;
   }
   .middle .navbar-nav .nav-link a {
@@ -1407,8 +1422,8 @@ header .bottom .navbar-nav .nav-link {
 }
 @media (max-width: 576px) {
   .socials a svg {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
 }
 .trimestr {

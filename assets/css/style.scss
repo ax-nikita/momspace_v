@@ -383,11 +383,11 @@ body {
     a {
       gap: 20px;
       grid-template-areas: "img a arrow";
+      grid-template-columns: min-content auto min-content;
       & > div {
         height: 128px;
         grid-area: img;
       }
-      span,
       & > div{
         font-size: 2rem;
         width: 128px;
@@ -409,15 +409,19 @@ body {
 
 @media (max-width: 576px) {
   .illustration-box-circle {
-    width: 100%;
     a {
-      gap: 20px;
+      gap: 10px;
       & > div {
-        height: 128px;
+        height: 78px;
+        grid-area: img;
       }
-      span,
       & > div{
-        width: 128px;
+        font-size: 2rem;
+        width: 78px;
+      }
+      &:after {
+        height: 80px;
+        width: 50px;
       }
     }
   }
@@ -626,6 +630,12 @@ input:focus, textarea:focus, select:focus {
     .by-month {
       gap: 8px;
     }
+    &__flex-list {
+      &.short {
+        padding-left: 11px;
+        padding-right: 15px;
+      }
+    }
   }
 }
 
@@ -637,6 +647,12 @@ input:focus, textarea:focus, select:focus {
     }
     .by-month {
       gap: 6px;
+    }
+    &__flex-list {
+      &.short {
+        padding-left: 0px;
+        padding-right: 0px;
+      }
     }
   }
 }
@@ -1517,6 +1533,8 @@ header {
         padding: 15px 20px;
         height: 45px;
         margin-left: 2%;
+        width: 100%;
+        margin-right: 6px;
       }
 
       .sandwich {
@@ -1554,21 +1572,20 @@ header {
     .up {
       padding: 14px 20px 12px 20px;
       grid-template-columns: min-content 40px auto max-content;
+      gap: 5px;
 
       .sandwich {
         margin-right: 10px;
-        padding:  7px 4px;
+        padding:  2px 4px;
         svg {
-          width: 30px;
+          width: 20px;
           height: 25px;
         }
       }
 
-
-
       .search-box {
-        padding: 14px 17px;
-        height: 40px;
+        padding: 9px 10px;
+        height: 30px;
         margin-left: 0;
       }
 
@@ -1577,7 +1594,7 @@ header {
           display: none;
         }
         svg {
-          height: 40px;
+          height: 30px;
           width: 100px;
         }
       }
@@ -1663,8 +1680,8 @@ header {
 @media (max-width: 576px) {
   .socials {
     a svg {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
     }
   }
 }
