@@ -76,6 +76,18 @@ body {
   }
 }
 
+@media (max-width: 413px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 374px) {
+  html {
+    font-size: 8px;
+  }
+}
+
 
 .container {
   padding: 0;
@@ -601,16 +613,19 @@ input:focus, textarea:focus, select:focus {
       flex-direction: column;
     }
     &__flex-list {
+      padding-top: 3rem;
       &.short {
         padding-left: 21px;
         padding-right: 25px;
       }
     }
     &__section {
+      padding: 1.5rem 2rem 3rem 2rem;
       & > h2,
       & > h3,
       & > h4,
       & > h5{
+        padding-top: 3rem;
         max-width: 100%;
       }
     }
@@ -628,7 +643,7 @@ input:focus, textarea:focus, select:focus {
       flex-direction: column;
     }
     .by-month {
-      gap: 8px;
+      gap: 0.5rem;
     }
     &__flex-list {
       &.short {
@@ -644,9 +659,6 @@ input:focus, textarea:focus, select:focus {
     padding: 11px 9px 9px 11px;
     &__flex-list.vertical-576 {
       flex-direction: column;
-    }
-    .by-month {
-      gap: 6px;
     }
     &__flex-list {
       &.short {
@@ -1118,6 +1130,7 @@ a.pink-arrow {
       "сontact-btn  terms-link"
       "socials-list terms-link";
     gap: 5px;
+    padding: 3rem 2.5rem;
     &__development {
       display: none;
     }
@@ -1133,6 +1146,7 @@ a.pink-arrow {
     &__сontact-btn {
       justify-self: start;
       width: 100%;
+      align-self: end;
       .btn {
         align-self: start;
         padding: 0.5rem 1rem;
@@ -1142,6 +1156,7 @@ a.pink-arrow {
 
     &__socials-list {
       text-align: start;
+      align-self: end;
       h4 {
         padding-bottom: 1rem;
       }
@@ -1298,7 +1313,7 @@ header {
     }
 
     .socials {
-      gap: 6px;
+      gap: 0.5rem;
     }
 
     .sandwich {
@@ -1566,16 +1581,16 @@ header {
 
 @media (max-width: 576px) {
   body {
-    padding-top: 72px;
+    padding-top: 62px;
   }
   header {
     .up {
       padding: 14px 20px 12px 20px;
-      grid-template-columns: min-content 40px auto max-content;
+      grid-template-columns: min-content 30px auto max-content;
       gap: 5px;
 
       .sandwich {
-        margin-right: 10px;
+        margin-right: 0px;
         padding:  2px 4px;
         svg {
           width: 20px;
@@ -1701,6 +1716,12 @@ header {
 @media (max-width: 1200px) {
   .trimestr {
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .trimestr {
+    padding: 2rem;
   }
 }
 

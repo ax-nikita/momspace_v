@@ -63,6 +63,16 @@ body::-webkit-scrollbar-thumb, body::-webkit-scrollbar-track {
     font-size: 10px;
   }
 }
+@media (max-width: 413px) {
+  html {
+    font-size: 9px;
+  }
+}
+@media (max-width: 374px) {
+  html {
+    font-size: 8px;
+  }
+}
 .container {
   padding: 0;
 }
@@ -539,11 +549,18 @@ input:focus, textarea:focus, select:focus {
   .simple-box__flex-list.vertical-992 {
     flex-direction: column;
   }
+  .simple-box__flex-list {
+    padding-top: 3rem;
+  }
   .simple-box__flex-list.short {
     padding-left: 21px;
     padding-right: 25px;
   }
+  .simple-box__section {
+    padding: 1.5rem 2rem 3rem 2rem;
+  }
   .simple-box__section > h2, .simple-box__section > h3, .simple-box__section > h4, .simple-box__section > h5 {
+    padding-top: 3rem;
     max-width: 100%;
   }
   .simple-box__link-btn {
@@ -558,7 +575,7 @@ input:focus, textarea:focus, select:focus {
     flex-direction: column;
   }
   .simple-box .by-month {
-    gap: 8px;
+    gap: 0.5rem;
   }
   .simple-box__flex-list.short {
     padding-left: 11px;
@@ -571,9 +588,6 @@ input:focus, textarea:focus, select:focus {
   }
   .simple-box__flex-list.vertical-576 {
     flex-direction: column;
-  }
-  .simple-box .by-month {
-    gap: 6px;
   }
   .simple-box__flex-list.short {
     padding-left: 0px;
@@ -973,6 +987,7 @@ a.pink-arrow:after {
   .footer {
     grid-template-areas: "sections articles" "sections logo" "сontact-btn  terms-link" "socials-list terms-link";
     gap: 5px;
+    padding: 3rem 2.5rem;
   }
   .footer__development {
     display: none;
@@ -986,6 +1001,7 @@ a.pink-arrow:after {
   .footer__сontact-btn {
     justify-self: start;
     width: 100%;
+    align-self: end;
   }
   .footer__сontact-btn .btn {
     align-self: start;
@@ -994,6 +1010,7 @@ a.pink-arrow:after {
   }
   .footer__socials-list {
     text-align: start;
+    align-self: end;
   }
   .footer__socials-list h4 {
     padding-bottom: 1rem;
@@ -1120,7 +1137,7 @@ header .up .logo [fill="#B1E384"] {
   animation: pulse 7s infinite;
 }
 header .up .socials {
-  gap: 6px;
+  gap: 0.5rem;
 }
 header .up .sandwich {
   display: none;
@@ -1337,15 +1354,15 @@ header .bottom .navbar-nav .nav-link {
 }
 @media (max-width: 576px) {
   body {
-    padding-top: 72px;
+    padding-top: 62px;
   }
   header .up {
     padding: 14px 20px 12px 20px;
-    grid-template-columns: min-content 40px auto max-content;
+    grid-template-columns: min-content 30px auto max-content;
     gap: 5px;
   }
   header .up .sandwich {
-    margin-right: 10px;
+    margin-right: 0px;
     padding: 2px 4px;
   }
   header .up .sandwich svg {
@@ -1441,6 +1458,11 @@ header .bottom .navbar-nav .nav-link {
 @media (max-width: 1200px) {
   .trimestr {
     width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .trimestr {
+    padding: 2rem;
   }
 }
 .content-wrapper {
