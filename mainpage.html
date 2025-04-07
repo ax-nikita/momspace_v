@@ -1211,10 +1211,21 @@
     }
 
     Array.from(document.querySelectorAll('.nav-link.dropdown-toggle')).forEach(el => {
-        el.addEventListener('click', () => {
-            hide_all_dropdown();
+        let parent = el.parentNode;
 
-            el.parentNode.classList.add('active');
+        el.addEventListener('click', () => {
+            if (parent.classList.contains('active')) {
+                hide_all_dropdown();
+            } else {
+                hide_all_dropdown();
+                el.parentNode.classList.add('active');
+            }
+        });
+
+        parent.querySelector('.dropdown-menu').addEventListener('mouseleave', () => {
+            if (parent.classList.contains('active')) {
+                hide_all_dropdown();
+            }
         });
     });
 
@@ -1223,6 +1234,10 @@
             hide_all_dropdown();
         }
     })
+
+    document.querySelector(".extra-menu").addEventListener("mouseleave", function() {
+        document.getElementById('open-nav-menu').checked = false;
+    });
 </script>
 </body>
 </html>
