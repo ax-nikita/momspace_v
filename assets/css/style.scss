@@ -1541,14 +1541,14 @@ header {
                 display: block;
                 justify-self: end;
                 left: -8px;
-                bottom: 23px;
+                bottom: 22px;
               }
             }
             &.active {
               & > a  {
                 &:after {
-                  left: -6px;
-                  bottom: -18px;
+                  left: 1px;
+                  bottom: -22px;
                 }
               }
               & > ul.dropdown-menu {

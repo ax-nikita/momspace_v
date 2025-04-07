@@ -1336,11 +1336,11 @@ header .middle .extra-menu > ul > li.extra-menu__title li.dropdown > a:after {
   display: block;
   justify-self: end;
   left: -8px;
-  bottom: 23px;
+  bottom: 22px;
 }
 header .middle .extra-menu > ul > li.extra-menu__title li.dropdown.active > a:after {
-  left: -6px;
-  bottom: -18px;
+  left: 1px;
+  bottom: -22px;
 }
 header .middle .extra-menu > ul > li.extra-menu__title li.dropdown.active > ul.dropdown-menu {
   position: relative;
