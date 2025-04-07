@@ -119,35 +119,35 @@ body::-webkit-scrollbar-thumb, body::-webkit-scrollbar-track {
 }
 
 .back-green {
-  background-color: var(--theme-green);
+  background-color: var(--theme-green) !important;
 }
 
 .back-lgreen {
-  background-color: var(--theme-lgreen);
+  background-color: var(--theme-lgreen) !important;
 }
 
 .back-pink {
-  background-color: var(--theme-pink);
+  background-color: var(--theme-pink) !important;
 }
 
 .back-lpink {
-  background-color: var(--theme-lpink);
+  background-color: var(--theme-lpink) !important;
 }
 
 .back-lblue {
-  background-color: var(--theme-lblue);
+  background-color: var(--theme-lblue) !important;
 }
 
 .back-llgray {
-  background-color: var(--theme-llgray);
+  background-color: var(--theme-llgray) !important;
 }
 
 .back-lpurple {
-  background-color: var(--theme-lpurple);
+  background-color: var(--theme-lpurple) !important;
 }
 
 .back-llime {
-  background-color: var(--theme-llime);
+  background-color: var(--theme-llime) !important;
 }
 
 .border-lgray {
@@ -1259,7 +1259,7 @@ header .middle .navbar-nav .nav-item ul.dropdown-menu {
 header .middle .navbar-nav .nav-item a:hover {
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0);
-  border-radius: 1rem;
+  border-radius: 2rem;
   color: var(--theme-black);
   text-shadow: 0 0 5px var(--theme-lpink);
   transform: scale(1.04);
