@@ -279,7 +279,7 @@
                         </li>
                         <li class="nav-item extra-menu__title">
                             <a href="#" class="back-lgreen">Сервисы</a>
-                            <ul class="navbar-nav">
+                            <ul class="navbar-nav small-padding">
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button"
                                        data-bs-toggle="dropdown" aria-expanded="false">Знаки зодиака</a>
@@ -320,10 +320,10 @@
                         </li>
                         <li class="nav-item extra-menu__title">
                             <a href="#" class="back-lpink">Детям</a>
-                            <ul class="navbar-nav">
+                            <ul class="navbar-nav small-padding">
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">Знаки зодиака</a>
+                                            data-bs-toggle="dropdown" aria-expanded="false">Раскраски</a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a class="dropdown-item" href="#">Подкатегория 1</a></li>
                                         <li><a class="dropdown-item" href="#">Подкатегория 2</a></li>
@@ -332,7 +332,7 @@
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button"
-                                       data-bs-toggle="dropdown" aria-expanded="false">Гороскоп</a>
+                                       data-bs-toggle="dropdown" aria-expanded="false">Загадки</a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a class="dropdown-item" href="#">Подкатегория 1</a></li>
                                         <li><a class="dropdown-item" href="#">Подкатегория 2</a></li>
@@ -341,7 +341,7 @@
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button"
-                                       data-bs-toggle="dropdown" aria-expanded="false">Сонник</a>
+                                       data-bs-toggle="dropdown" aria-expanded="false">Сказки</a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a class="dropdown-item" href="#">Подкатегория 1</a></li>
                                         <li><a class="dropdown-item" href="#">Подкатегория 2</a></li>
@@ -350,7 +350,34 @@
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button"
-                                       data-bs-toggle="dropdown" aria-expanded="false">Тесты</a>
+                                       data-bs-toggle="dropdown" aria-expanded="false">Стихи</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Подкатегория 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Подкатегория 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Подкатегория 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button"
+                                       data-bs-toggle="dropdown" aria-expanded="false">Басни</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Подкатегория 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Подкатегория 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Подкатегория 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button"
+                                       data-bs-toggle="dropdown" aria-expanded="false">Мультики</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Подкатегория 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Подкатегория 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Подкатегория 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button"
+                                       data-bs-toggle="dropdown" aria-expanded="false">Развивающие игры</a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a class="dropdown-item" href="#">Подкатегория 1</a></li>
                                         <li><a class="dropdown-item" href="#">Подкатегория 2</a></li>
@@ -700,7 +727,7 @@
                         <div class="box number">08</div>
                         <div class="box number">09</div>
                         <div class="link-btn a-width-100-1400">
-                            <a class="pink-arrow" href="#">
+                            <a class="pink-arrow hide-992" href="#">
                                 Полезные материалы о планировнаии беременности
                             </a>
                         </div>
@@ -1140,7 +1167,7 @@
 
         </div>
     </footer>
-    <!-- <img class="test" src="/assets/images/ads.jpg"> -->
+    <!-- <img class="test" src="/assets/images/meny.jpg"> -->
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script type="module">
@@ -1176,6 +1203,26 @@
         },
         spaceBetween: 10,
     });
+
+    function hide_all_dropdown () {
+        Array.from(document.querySelectorAll('.nav-item.active')).forEach((old_el) => {
+            old_el.classList.remove('active');
+        });
+    }
+
+    Array.from(document.querySelectorAll('.nav-link.dropdown-toggle')).forEach(el => {
+        el.addEventListener('click', () => {
+            hide_all_dropdown();
+
+            el.parentNode.classList.add('active');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if(!e.target || !['nav-item', 'nav-link'].includes(e.target.classList[0])) {
+            hide_all_dropdown();
+        }
+    })
 </script>
 </body>
 </html>
